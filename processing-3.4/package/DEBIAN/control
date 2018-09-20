@@ -4,7 +4,7 @@ Maintainer: vollstock <daniel@vollstock.de>
 Homepage: https://www.vollstock.de
 Section: tooloop/addon
 Architecture: all
-Description: Processing 3.4
+Name: Processing 3.4
 Description: Software sketchbook and a language for learning how to code
  Processing is a flexible software sketchbook and a language for learning how
  to code within the context of the visual arts. Since 2001, Processing has 
