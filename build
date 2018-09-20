@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# build packages
+for folder in *; do
+    if [ -d $folder ] && [ ${folder:0:1}  != "#" ]; then
+        package="$(cat $folder/DEBIAN/control | grep 'Package: ')"
+        arch="$(cat $folder/DEBIAN/control | grep 'Architecture: ')"
+        version="$(cat $folder/DEBIAN/control | grep 'Version: ')"
+        dpkg  --build $folder "${package#*: }_${version#*: }_${arch#*: }.deb"
+        #echo "${package#*: }_${version#*: }_${arch#*: }.deb"
+    fi
+done

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -fr /assets/packages/*.deb
+rm -fr /assets/packages/Packages*
+rm -fr /assets/packages/Release
+
+exit 0

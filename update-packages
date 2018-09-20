@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# move them to the repository
+mv *.deb /assets/packages
+
+# update apt
+/opt/tooloop/scripts/tooloop-update-packages
+
+#echo " "
+#echo "Available packages:"
+apt list tooloop*
