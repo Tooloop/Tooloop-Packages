@@ -1,0 +1,13 @@
+Package: tooloop-kiosk-browser
+Version: 0.1.0
+Maintainer: vollstock
+Homepage: https://www.vollstock.de
+Bugs: https://github.com/vollstock/Tooloop-Examples.git
+Section: tooloop/presentation
+Architecture: amd64
+Depends: chromium-browser
+Recommends: tooloop-transparent-cursor
+Name: Kiosk Browser
+Description: Full-screen browser for touch kiosks
+ A simple full-screen kiosk browser based on chromium.
+ You can define its’ homepage in the settings.
