@@ -96,22 +96,19 @@ e.g.
 
 **Packaging for Tooloop**
 
-    package_name/
+    package.zip
     │
-    ├─ package/
-    │  └─ ...
+    ├─ <package-name>_v.v.v_aaa.deb (mandatory)
     │
     └─ media/
        ├─ preview_image.jpg (mandatory)
-       ├─ <packagename>_1.png
-       ├─ <packagename>_2.jpg
+       ├─ <package-name>_1.png
+       ├─ <package-name>_2.jpg
        └─ ...
 
 media: png or jpg
 preview_image.xxx: thumbnail
 <packagename>xxxxx: app center media
-
-ZIP it
 
 
 
