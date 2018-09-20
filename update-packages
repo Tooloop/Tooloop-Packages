@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # move them to the repository
-mv *.deb /assets/packages
+for folder in *; do
+    if [ -d $folder ] && [ ${folder:0:1}  != "#" ]; then
+        mv $folder/*.deb /assets/packages
+    fi
+done
 
 # update apt
 /opt/tooloop/scripts/tooloop-update-packages
