@@ -2,7 +2,7 @@ Package: tooloop-kiosk-browser
 Version: 0.1.0
 Maintainer: vollstock
 Homepage: https://www.vollstock.de
-Bugs: https://github.com/vollstock/Tooloop-Examples.git
+Bugs: https://github.com/vollstock/Tooloop-Examples
 Section: tooloop/presentation
 Architecture: amd64
 Depends: chromium-browser
