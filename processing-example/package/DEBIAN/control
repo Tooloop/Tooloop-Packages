@@ -4,7 +4,7 @@ Maintainer: vollstock <daniel@vollstock.de>
 Homepage: https://www.vollstock.de
 Architecture: all
 Section: tooloop/presentation
-Pre-Depends: tooloop-processing (= 3.4.0)
+Pre-Depends: tooloop-processing (= 3.4)
 Name: Processing Example
 Description: A simple example of how to bundle processing sketches
  This is a just a simple example of how to bundle processing sketches 
