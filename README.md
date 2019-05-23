@@ -1,22 +1,39 @@
-# DEB packaging store
+# Tooloop Packages
 
-http://packaging.ubuntu.com/html/packaging-new-software.html
-https://blog.serverdensity.com/how-to-create-a-debian-deb-package/
-https://www.debian.org/doc/debian-policy/ch-binary.html
+This repository contains all apps, that come bundled with Tooloop OS.
+It’s also a great place to get information on how to build your own package.
 
 
 ## Creating a package
+
+Tooloop Packages are ZIP files, containing a Debian package and additional images, displayed in the app center:
+
+    package.zip
+    │
+    ├─ <package-name>_v.v.v_aaa.deb (mandatory)
+    │
+    └─ media/
+       ├─ <preview_image>.jpg (mandatory)
+       ├─ <optional-image>.png
+       ├─ <optional-image>.jpg
+       └─ ...
+
 
 **Debian package**
 
 Create a folder structure with your stuff:
 
-    package/
+    Your-App
     │
+    ├─ media/ (your image files)
+    │  ├─ some-image.jpg
+    │  └─ ...
+    │
+    package/ (the Debian package)
     ├─ DEBIAN/
     │  ├─ control (mandatory)
-    │  ├─ postinst (mandatory)
-    │  ├─ postrm (mandatory)
+    │  ├─ postinst (optional)
+    │  ├─ postrm (optional)
     │  └─ ...
     │
     ├─ assets/
@@ -44,6 +61,9 @@ All other folders except simply copied to disk for you.
 
 **The DEBIAN/control file**
 
+This file contains all the information about your package.
+It’s used to display information in the app center.
+
 https://linux.die.net/man/5/deb-control
 
     Package: tooloop-processing-example
@@ -63,6 +83,12 @@ https://linux.die.net/man/5/deb-control
     # All following lines are used as detailed description.
     Description: A simple example, how to make a processing app
      Longer description…
+    # The thumbnail shown in the app center
+    Thumbnail: thumbnail.jpg
+    # The media files, shown in the detail view of the package
+    # can be JPGs and PNGs
+    Media: image1.jpg,
+           image2.png
 
 
 **Scripts**
@@ -93,22 +119,6 @@ e.g.
     dpkg --build kiosk-browser tooloop-processing-example_0.9.0_amd64.deb
 
 
-
-**Packaging for Tooloop**
-
-    package.zip
-    │
-    ├─ <package-name>_v.v.v_aaa.deb (mandatory)
-    │
-    └─ media/
-       ├─ preview_image.jpg (mandatory)
-       ├─ <package-name>_1.png
-       ├─ <package-name>_2.jpg
-       └─ ...
-
-media: png or jpg
-preview_image.xxx: thumbnail
-<packagename>xxxxx: app center media
 
 
 
@@ -183,3 +193,10 @@ https://askubuntu.com/a/473511/873460
 
 
 
+## Links
+
+**DEB packaging**
+
+http://packaging.ubuntu.com/html/packaging-new-software.html
+https://blog.serverdensity.com/how-to-create-a-debian-deb-package/
+https://www.debian.org/doc/debian-policy/ch-binary.html
