@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+cat <<EOT >>
+
+# Virtual Keyboard
+# set keyboard layout"
+# https://answers.launchpad.net/onboard/+question/235265
+onboard &
+EOT
+
+exit 0

@@ -1,0 +1,13 @@
+Package: tooloop-virtual-keyboard
+Version: 0.1.0
+Maintainer: vollstock
+Homepage: https://www.vollstock.de
+Bugs: https://github.com/Tooloop/Tooloop-Packages
+Section: tooloop/addons
+Architecture: all
+Depends: onboard
+         dbus-x11
+Name: Virtual Keyboard
+Description: Onscreen Keyboard for touchscreens
+ It uses the onboard virtual keyboard. If you have trouble with your keyboard
+ switching language after tapping a key, find the line in /home/tooloop/.config/openbox
