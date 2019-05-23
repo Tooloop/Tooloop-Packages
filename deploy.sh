@@ -7,9 +7,8 @@ for folder in *; do
     fi
 done
 
-# update apt
+# update local package repository
 /opt/tooloop/scripts/tooloop-update-packages
 
-#echo " "
-#echo "Available packages:"
+# list available packages
 apt list tooloop*

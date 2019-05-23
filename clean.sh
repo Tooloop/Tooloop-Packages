@@ -10,5 +10,6 @@ done
 rm -fr /assets/packages/*.deb
 rm -fr /assets/packages/Packages*
 rm -fr /assets/packages/Release
+rm -fr /assets/packages/media/*
 
 exit 0
