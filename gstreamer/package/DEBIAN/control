@@ -30,13 +30,16 @@ Depends: mpg123,
          libgstreamer1.0-0-dbg,
          libgstreamer1.0-dev,
          va-driver-all,
-         libva-glx1,
-         libva-x11-1,
-         vainfo
+         libva-glx2,
+         libva-x11-2,
+         vainfo,
+         libvdpau-va-gl1,
+         vdpau-driver-all,
+         vdpauinfo,
+         vdpau-va-driver
 Name: Gstreamer
 Description: Library for constructing graphs of media-handling components
  GStreamer is a library for constructing graphs of media-handling components.
  The applications it supports range from simple Ogg/Vorbis playback, audio/video
  streaming to complex audio (mixing) and video (non-linear editing) processing.
 Thumbnail: gstreamer-thumbnail.png
-
