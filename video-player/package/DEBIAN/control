@@ -9,3 +9,5 @@ Depends: mplayer
 Name: Video Player
 Description: A simple looping video player
  The tooloop video player is using mplayer to loop over all videos it find in `/assets/data`.
+Thumbnail: video-player-thumbnail.jpg
+

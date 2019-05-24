@@ -11,3 +11,5 @@ Name: Kiosk Browser
 Description: Full-screen browser for touch kiosks
  A simple full-screen kiosk browser based on chromium.
  You can define its’ homepage in the settings.
+Thumbnail: kiosk-browser-thumbnail.jpg
+
