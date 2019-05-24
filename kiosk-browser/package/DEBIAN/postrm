@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Exit immediately if a command exits with a non-zero status
-set -e
-# Restart the settings server
-systemctl restart tooloop-settings-server
-# Exit cleanly
-exit 0
