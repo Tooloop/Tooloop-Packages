@@ -10,3 +10,5 @@ Name: Image slideshow
 Description: Image slideshow with smooth transitions
  A simple example app using the chromium browser and some javascript to display
  a fullscreen image slideshow.
+Thumbnail: image-slideshow-thumbnail.jpg
+

@@ -5,17 +5,20 @@ set -e
 # build packages
 for folder in *; do
     if [ -d $folder ] && [ ${folder:0:1}  != "#" ]; then
+        cd $folder
+
         # Get package infos
-        package="$(cat $folder/package/DEBIAN/control | grep 'Package: ')"
-        arch="$(cat $folder/package/DEBIAN/control | grep 'Architecture: ')"
-        version="$(cat $folder/package/DEBIAN/control | grep 'Version: ')"
+        package="$(cat package/DEBIAN/control | grep 'Package: ')"
+        arch="$(cat package/DEBIAN/control | grep 'Architecture: ')"
+        version="$(cat package/DEBIAN/control | grep 'Version: ')"
         packagename="${package#*: }_${version#*: }_${arch#*: }"
         
         # Build Debian package
-        dpkg --build $folder/package $packagename.deb
+        dpkg --build package $packagename.deb
         
         # Bundle it with media files for the Tooloop app center
-        # cd $folder
-        # zip -9 --exclude=*package* ../$packagename.zip $packagename.deb media/*
+        zip -9 --exclude=*package* ../$packagename.zip $packagename.deb media/*
+
+        cd ..
     fi
 done
