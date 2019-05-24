@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
-cat <<EOT >>
+cat <<EOT >> /home/tooloop/.config/openbox/autostart
 
 # Virtual Keyboard
 # set keyboard layout"
 # https://answers.launchpad.net/onboard/+question/235265
+/home/tooloop/.config/onboard-config.sh &
 onboard &
 EOT
 

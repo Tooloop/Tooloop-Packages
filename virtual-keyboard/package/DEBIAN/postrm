@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Kill running instance
+killall onboard &
+
+# rmeove lines from autostart
+sed -i '/onboard/d'  /home/tooloop/.config/openbox/autostart
+sed -i '/Keyboard/d'  /home/tooloop/.config/openbox/autostart
+sed -i '/keyboard/d'  /home/tooloop/.config/openbox/autostart
+
+exit 0
