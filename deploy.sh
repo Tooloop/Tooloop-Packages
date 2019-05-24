@@ -11,7 +11,7 @@ for archive in *; do
 done
 
 # update local package repository
-#/opt/tooloop/scripts/tooloop-update-packages
+/opt/tooloop/scripts/tooloop-update-packages
 
 # list available packages
 #apt list tooloop*
