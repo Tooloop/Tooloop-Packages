@@ -1,6 +1,6 @@
 # Tooloop Packages
 
-This repository contains all apps, that come bundled with Tooloop OS.
+This repository contains presentations and addons, that come bundled with Tooloop OS.
 It’s also a great place to get information on how to build your own package.
 
 
@@ -19,7 +19,7 @@ Tooloop Packages are ZIP files, containing a Debian package and additional image
        └─ ...
 
 
-**Debian package**
+**Creating a Debian package**
 
 Create a folder structure with your stuff:
 
@@ -36,27 +36,19 @@ Create a folder structure with your stuff:
     │  ├─ postrm (optional)
     │  └─ ...
     │
-    ├─ assets/
-    │  ├─ presentation/
-    │  │  ├─ LICENSE.md
-    │  │  ├─ README.md
-    │  │  ├─ start-presentation.sh (mandatory)
-    │  │  ├─ stop-presentation.sh (mandatory)
-    │  │  └─ ...
-    │  │
-    │  └─ data/
-    │     └─ ...
-    │
-    └─ opt/
-       └─ tooloop/
-          └─ settings─server/
-             └─ installed_app/
-                ├─ controller.py
-                └─ settings.html
-     
+    └─ assets/
+       ├─ presentation/
+       │  ├─ LICENSE.md
+       │  ├─ README.md
+       │  ├─ start-presentation.sh (mandatory)
+       │  ├─ stop-presentation.sh (mandatory)
+       │  └─ ...
+       │
+       └─ data/
+          └─ ...
 
-The `DEBIAN` contains the package information and some control files.
-All other folders except simply copied to disk for you.
+
+The `DEBIAN` folder contains the package information and some control files. All other folders are simply copied to disk for you.
 
 
 **The DEBIAN/control file**
