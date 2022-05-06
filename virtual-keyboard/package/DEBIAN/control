@@ -3,7 +3,7 @@ Version: 0.1.0
 Maintainer: vollstock
 Homepage: https://www.vollstock.de
 Bugs: https://github.com/Tooloop/Tooloop-Packages
-Section: tooloop/addons
+Section: tooloop/addon
 Architecture: all
 Depends: onboard,
          dbus-x11,
