@@ -1,8 +1,8 @@
 Package: tooloop-video-player
-Version: 0.1.0
-Maintainer: vollstock
-Homepage: https://www.vollstock.de
-Bugs: https://github.com/vollstock/Tooloop-Examples
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://github.com/Tooloop/Tooloop-Packages
 Section: tooloop/presentation
 Architecture: all
 Depends: mplayer
