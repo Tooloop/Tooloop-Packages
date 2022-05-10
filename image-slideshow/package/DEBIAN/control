@@ -1,13 +1,13 @@
 Package: tooloop-image-slideshow
 Version: 1.0.0
-Maintainer: Tooloop Multimedia <daniel.stock@tooloop.de>
+Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
-Bugs: https://github.com/tooloop/Tooloop-Packages
+Bugs: https://github.com/Tooloop/Tooloop-Packages
 Section: tooloop/presentation
 Architecture: all
 Depends: chromium-browser
 Name: Image slideshow
-Description: Image slideshow with smooth transitions
+Description: A simple image slideshow
  A simple example app using the chromium browser and some javascript to display
  a fullscreen image slideshow.
 Thumbnail: image-slideshow-thumbnail.jpg
