@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pkill chromium
+killall chrome
 
 exit 0
