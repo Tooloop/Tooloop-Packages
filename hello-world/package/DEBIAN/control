@@ -1,0 +1,21 @@
+Package: hello-world
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://www.github.com/Tooloop/Tooloop-Packages
+Section: tooloop/presentation
+Architecture: amd64
+Name: Hello World
+Thumbnail: hello-world-thumbnail.jpg
+Media: hello-world-image-1.jpg, hello-world-image-2.jpg, hello-world-image-3.jpg
+Description: Example package skeleton
+ ### Just an example
+ .
+ This package is meant as a bare example to get you started packaging your own 
+ presentation. Use it as a skeleton. For more details, please see the 
+ [README](https://github.com/Tooloop/Tooloop-Packages).
+ .
+ ### Credits
+ .
+ Photos by [NASA](https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+ on [Unsplash](https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

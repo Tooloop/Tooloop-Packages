@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+# Do something before package installation
+
+exit 0
