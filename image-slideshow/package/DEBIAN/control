@@ -7,7 +7,9 @@ Section: tooloop/presentation
 Architecture: all
 Depends: chromium-browser
 Name: Image slideshow
+Thumbnail: image-slideshow-thumbnail.jpg
 Description: A simple image slideshow
  A simple example app using the chromium browser and some javascript to display
  a fullscreen image slideshow.
-Thumbnail: image-slideshow-thumbnail.jpg
+ .
+ The images are stored in the `/assets/data` folder.
