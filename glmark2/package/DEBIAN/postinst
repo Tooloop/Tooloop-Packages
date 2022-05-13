@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+touch /assets/logs/glmark2.txt
+chown tooloop:tooloop /assets/logs/glmark2.txt
+
+exit 0
