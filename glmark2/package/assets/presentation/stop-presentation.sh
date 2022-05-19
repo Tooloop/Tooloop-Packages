@@ -1,5 +1,5 @@
 #!/bin/bash
 
-killall chrome
+killall glmark2
 
 exit 0

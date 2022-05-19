@@ -1,0 +1,30 @@
+Package: tooloop-glmark2
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://github.com/glmark2/glmark2
+Section: tooloop/presentation
+Depends: glmark2
+Architecture: amd64
+Name: glmark2
+Thumbnail: glmark2-thumbnail.jpg
+Media: glmark2-jellyfish.jpg, glmark2-buffer.jpg, glmark2-refract.jpg, glmark2-shadow.jpg
+Description: OpenGL 2.0 and ES 2.0 benchmark
+ This is a meta package installing [glmark2](https://github.com/glmark2/glmark2). 
+ glmark2 runs several tests and returns a final total score afterwards.
+ It’s useful to compare and benchmark different computers or graphics cards.
+ .
+ ### Testing
+ .
+ All test scenes are run at a resolution of 1920 × 1080 px and results are 
+ stored in `/assets/logs/glmark2.txt`
+ .
+ If you wan’t to change test parameters, simply change the command in 
+ `/assets/presentation/start-presentation.sh`. Please refer to the 
+ [glmark2 man pages](https://manpages.ubuntu.com/manpages/jammy/man1/glmark2.1.html) 
+ to learn about all options.
+ .
+ ### Attribution
+ .
+ glmark2 is developed by Alexandros Frantzis and Jesse Barker based on the 
+ original glmark benchmark by Ben Smith.

@@ -2,23 +2,21 @@
 <meta charset="utf-8">
 
 <html>
+
 <head>
     <title>Simple Kiosk</title>
 
     <style type="text/css">
-        
         canvas {
             display: block;
-            vertical-align: bottom;
         }
 
         #particles {
-            position:absolute;
+            position: absolute;
             width: 100%;
             height: 100%;
             background-color: #172e4d;
-            /*background: radial-gradient(ellipse at center, #224a5e 0%,#172e4d 100%);*/
-            background: radial-gradient(ellipse at center, #224a5e 0%,#172e4d 50%,#050b23 100%);
+            background: radial-gradient(ellipse at center, #224a5e 0%, #172e4d 50%, #050b23 100%);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50% 50%;
@@ -27,7 +25,7 @@
         #box {
             width: 50%;
             position: absolute;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             left: 25%;
             top: 25%;
             border-radius: 2px;
@@ -35,10 +33,13 @@
             max-width: 640px;
             box-sizing: border-box;
             padding: 50px 40px 50px 40px;
-            -webkit-user-select: none;  /* Chrome all / Safari all */
-            -moz-user-select: none;     /* Firefox all */
-            -ms-user-select: none;      /* IE 10+ */
-            user-select: none; 
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
         }
 
         #credits {
@@ -51,7 +52,10 @@
             font-weight: lighter;
         }
 
-        body, div, h1, p {
+        body,
+        div,
+        h1,
+        p {
             margin: 0;
             font-family: 'ClearSans', sans-serif;
             font-weight: 100;
@@ -59,7 +63,8 @@
             line-height: 1.25em;
         }
 
-        h1, p {
+        h1,
+        p {
             margin: 0 0 1em 0;
         }
 
@@ -69,10 +74,11 @@
             font-size: 2em;
         }
 
-        a, a:visited, a:active {
+        a,
+        a:visited,
+        a:active {
             color: #b1148e;
         }
-
     </style>
 
 </head>
@@ -85,17 +91,17 @@
         <h1>Simple Kiosk</h1>
         <p>This is a simple browser for your show room or trade fair booth.</p>
         <p>It has very few features but works for simple things.</p>
-        <p>By default it loads <span style="font-family: monospace;">/assets/data/index.html</span> but you can choose any page you like.</p>
+        <p>By default it loads <span style="font-family: monospace;">/assets/data/index.html</span> but you can choose
+            any page you like.</p>
         <p>Simple Kiosk comes with a plugin for the Tooloop Settings Server so you can configure it in there.</p>
     </div>
 
     <div id="credits"><a href="http://vincentgarreau.com/particles.js/">particles.js</a> by Vincent Garreau</div>
 
-    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="particles.min.js"></script>
 
     <script type="text/javascript">
-        
+
         particlesJS("particles", {
             "particles": {
                 "number": {
@@ -116,12 +122,7 @@
                     },
                     "polygon": {
                         "nb_sides": 8
-                    },
-                    // "image": {
-                    //     "src": "img/github.svg",
-                    //     "width": 100,
-                    //     "height": 100
-                    // }
+                    }
                 },
                 "opacity": {
                     "value": 0.5,
@@ -206,7 +207,7 @@
             },
             "retina_detect": true
         });
-        var update = function() {
+        var update = function () {
             requestAnimationFrame(update);
         };
         requestAnimationFrame(update);;
@@ -214,4 +215,5 @@
     </script>
 
 </body>
+
 </html>

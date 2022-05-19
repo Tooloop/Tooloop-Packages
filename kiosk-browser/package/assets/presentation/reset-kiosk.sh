@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="file:///assets/data/index.html"
+URL="/media/assets/data/index.html"
 
 # List of Chromium Command Line Switches
 # https://peter.sh/experiments/chromium-command-line-switches/
@@ -20,13 +20,12 @@ COMMAND="chromium-browser \
 --class=TooloopKiosk \
 $URL"
 
+killall chrome
+sleep 0.1
+
 if [ $EUID == 0 ]; then
-    pkill chromium
-    sleep 0.1
     su tooloop -c "$COMMAND" &
 else
-    pkill chromium
-    sleep 0.1
     $COMMAND &
 fi
 

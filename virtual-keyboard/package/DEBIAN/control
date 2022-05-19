@@ -1,9 +1,9 @@
 Package: tooloop-virtual-keyboard
-Version: 0.1.0
-Maintainer: vollstock
-Homepage: https://www.vollstock.de
+Version: 0.2.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
 Bugs: https://github.com/Tooloop/Tooloop-Packages
-Section: tooloop/addons
+Section: tooloop/addon
 Architecture: all
 Depends: onboard,
          dbus-x11,
