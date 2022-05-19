@@ -1,12 +1,13 @@
 # Tooloop Packages
 
-This repository contains presentations and addons, that come bundled with Tooloop OS.
+This repository contains presentations and addons, that come bundled with 
+[Tooloop OS](https://github.com/Tooloop/Tooloop-OS).
 It’s also a great place to get information on how to build your own package.
 
 
-## Creating a package
+## Package format
 
-Tooloop Packages are ZIP files, containing a Debian package and additional images, displayed in the app center:
+Tooloop Packages are ZIP files, wrapping a Debian package and additional images, that are displayed in the [app center](https://github.com/Tooloop/Tooloop-Control):
 
     package.zip
     │
@@ -19,36 +20,37 @@ Tooloop Packages are ZIP files, containing a Debian package and additional image
        └─ ...
 
 
-**Creating a Debian package**
+## The Debian package
 
-Create a folder structure with your stuff:
 
-    Your-App
-    │
-    ├─ media/ (your image files)
-    │  ├─ some-image.jpg
+This is the folder structure:
+
+```
+│
+├─ media/ (your image files)
+│  ├─ some-image.jpg
+│  └─ ...
+│
+package/ (the Debian package)
+├─ DEBIAN/
+│  ├─ control (mandatory)
+│  ├─ postinst (optional)
+│  ├─ postrm (optional)
+│  └─ ...
+│
+└─ assets/
+    ├─ presentation/
+    │  ├─ LICENSE.md
+    │  ├─ README.md
+    │  ├─ start-presentation.sh (mandatory)
+    │  ├─ stop-presentation.sh (mandatory)
     │  └─ ...
     │
-    package/ (the Debian package)
-    ├─ DEBIAN/
-    │  ├─ control (mandatory)
-    │  ├─ postinst (optional)
-    │  ├─ postrm (optional)
-    │  └─ ...
-    │
-    └─ assets/
-       ├─ presentation/
-       │  ├─ LICENSE.md
-       │  ├─ README.md
-       │  ├─ start-presentation.sh (mandatory)
-       │  ├─ stop-presentation.sh (mandatory)
-       │  └─ ...
-       │
-       └─ data/
-          └─ ...
+    └─ data/
+        └─ ...
+```
 
-
-The `DEBIAN` folder contains the package information and some control files. All other folders are simply copied to disk for you.
+The `/DEBIAN` folder contains the package information and some control files. All other folders are simply copied to disk for you.
 
 
 **The DEBIAN/control file**
@@ -58,105 +60,68 @@ It’s used to display information in the app center.
 
 https://linux.die.net/man/5/deb-control
 
-    Package: tooloop-processing-example
-    # Use semantic versioning https://semver.org/
-    Version: 0.9.0
-    Maintainer: vollstock <daniel@vollstock.de>
-    Homepage: https://www.vollstock.de
-    Bugs: https://github.com/vollstock/Tooloop-Examples
-    # One of "tooloop/presentation", "tooloop/addon"
-    Section: tooloop/presentation
-    # One of "amd64", "armvl7", "all"
-    Architecture: amd64
-    Depends: tooloop-processing tooloop-processing (= 3.4.0)
-    # App name shown in the app center.
-    Name: Processing Example
-    # First line is the short description shown in the app center.
-    # All following lines are used as detailed description.
-    Description: A simple example, how to make a processing app
-     Longer description…
-    # The thumbnail shown in the app center
-    Thumbnail: thumbnail.jpg
-    # The media files, shown in the detail view of the package
-    # can be JPGs and PNGs
-    Media: image1.jpg,
-           image2.png
+```YAML
+Package: my-app
+# Use semantic versioning https://semver.org/
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://github.com/Tooloop/Tooloop-Packages
+# One of "tooloop/presentation", "tooloop/addon"
+Section: tooloop/presentation
+Architecture: amd64
+Depends: tooloop-transparent-cursor
+# App name shown in the app center.
+Name: My App
+# The thumbnail shown in the app center
+Thumbnail: my-app-thumbnail.jpg
+# The media files, shown in the detail view of the package
+# can be JPGs and PNGs
+Media: my-app-image1.jpg, my-app-image2.png
+# First line is the short description shown in the app center.
+# All following lines are used as detailed description.
+Description: A simple example, how to make a processing app
+ Longer description, indented by one space
+ .
+ empty lines have just a single point
+ *Markdown* _is_ ok
+ ends with one additional line break
 
+```
 
 **Scripts**
 
 You can add scripts in `DEBIAN` to further customize installation:
 
-|  script  |         when        |
-|----------|---------------------|
+| script   | when                |
+| -------- | ------------------- |
 | preinst  | before installation |
 | postinst | after installation  |
 | prerm    | before removal      |
 | postrm   | after removal       |
 
-The scripts can be used to e. g. reload the settings server:
-
-    #!/bin/bash
-    set -e
-    systemctl restart tooloop-settings-server
-    exit 0
+Use those to create folders, auto-generate files, cleanup, etc.
 
 
-**Building the Debian package**
+## Building and deploying your package
 
-    dpkg --build packagefolder packagename_version_architecture.deb
+There scripts that you can use to build and deploy your package on a Tooloop OS Box. In fact, it’s these scripts that are used by the Tooloop OS installer.
+Start by simply copying the `hello-world` folder and hack away from there.
 
-e.g.
-
-    dpkg --build kiosk-browser tooloop-processing-example_0.9.0_amd64.deb
-
-
-
-
-
-## Setting up the local .deb repository
-
-https://askubuntu.com/questions/170348/how-to-create-a-local-apt-repository#176546
-
-Create a packages directory and a dirctory where installed addons will live in:
-
-    mkdir /assets/packages /assets/addons
-    chown -R tooloop:tooloop /assets
-
-Add `.keep` files so apt will not remove folders when purging packages:
-
-    touch /assets/addons/.keep
-    touch /assets/presentation/.keep
-    touch opt/tooloop/settings─server/installed_app/.keep
-
-Create a script that will scan packages and create a RELEASE file apt-get update can read
-
-`/opt/tooloop/scripts/update-tooloop-packages`
-
-    #! /bin/bash
-    
-    cd /assets/packages
-    
-    # Generate the Packages file
-    dpkg-scanpackages . /dev/null > Packages
-    gzip --keep --force -9 Packages
-    
-    # Generate the Release file
-    cat conf/distributions > Release
-    # The Date: field has the same format as the Debian package changelog entries,
-    # that is, RFC 2822 with time zone +0000
-    echo -e "Date: `LANG=C date -Ru`" >> Release
-    # Release must contain MD5 sums of all repository files (in a simple repo just the Packages and Packages.gz files)
-    echo -e 'MD5Sum:' >> Release
-    printf ' '$(md5sum Packages.gz | cut --delimiter=' ' --fields=1)' %16d Packages.gz' $(wc --bytes Packages.gz | cut --delimiter=' ' --fields=1) >> Release
-    printf '\n '$(md5sum Packages | cut --delimiter=' ' --fields=1)' %16d Packages' $(wc --bytes Packages | cut --delimiter=' ' --fields=1) >> Release
-    # Release must contain SHA256 sums of all repository files (in a simple repo just the Packages and Packages.gz files)
-    echo -e '\nSHA256:' >> Release
-    printf ' '$(sha256sum Packages.gz | cut --delimiter=' ' --fields=1)' %16d Packages.gz' $(wc --bytes Packages.gz | cut --delimiter=' ' --fields=1) >> Release
-    printf '\n '$(sha256sum Packages | cut --delimiter=' ' --fields=1)' %16d Packages' $(wc --bytes Packages | cut --delimiter=' ' --fields=1) >> Release
-    
-    # Get apt to see the changes
-    sudo apt-get update
+1. Clone this repo on a Tooloop Box
+2. Add your package folder (e. g. by copying the hello-world example)
+3. Build packages
+    ```bash
+    ./build.sh
+    ```
+4. Deploy packages
+    ```bash
+    ./deploy.sh
+    ```
+5. Restart the control center  
+    ```bash
+    sudo systemctyl restart tooloop-control.service
+    ```
 
 
 ## Useful commands
