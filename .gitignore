@@ -1,3 +1,4 @@
 *.deb
 *.zip
+.DS_Store
 \#*
