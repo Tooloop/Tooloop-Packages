@@ -13,6 +13,8 @@ done
 # update local package repository
 /opt/tooloop/scripts/tooloop-update-packages
 
+sudo systemctl restart tooloop-control.service
+
 # list available packages
 #apt list tooloop*
 
