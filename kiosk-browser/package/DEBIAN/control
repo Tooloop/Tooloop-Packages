@@ -7,6 +7,7 @@ Section: tooloop/presentation
 Architecture: amd64
 Depends: chromium-browser
 Recommends: tooloop-transparent-cursor
+Suggests: tooloop-nginx
 Name: Kiosk Browser
 Description: Full-screen browser for touch kiosks
  A simple full-screen kiosk browser based on chromium.
