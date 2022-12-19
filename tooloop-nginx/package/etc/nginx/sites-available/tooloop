@@ -25,7 +25,7 @@ server {
         include fastcgi.conf;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_param PATH_INFO $fastcgi_path_info;
-        fastcgi_param PHP_VALUE "upload_max_filesize=250M;\n error_reporting=E_ALL;";
+        fastcgi_param PHP_VALUE "upload_max_filesize=250M;\n post_max_size=250M;\n error_reporting=E_ALL;";
      }
 
     location ~ /\.ht {
