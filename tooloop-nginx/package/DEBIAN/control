@@ -8,7 +8,9 @@ Name: Dethleffs Touch-Kiosk
 Depends: nginx, php-fpm, php-mbstring, php-curl, php-xml, php-gd
 Recommends: tooloop-transparent-cursor
 Description: Installs the nginx webserver for web-based presentations
- [nginx](https://nginx.org) is a fast and lightweight webserver.  
- The document root for your website is ```/assets/data```.
- Use this address in your kiosk application ```http://127.0.0.1:8080```.
+ [nginx](https://nginx.org) is a fast and lightweight webserver.
+ .
+ The document root for your website is ```/assets/data```, log files are stored 
+ in ```/assets/logs```.</br>
+ Use this URL in your kiosk application ```http://127.0.0.1:8080```.
 Thumbnail: nginx-thumbnail.png
