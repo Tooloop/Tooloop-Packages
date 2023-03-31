@@ -4,7 +4,7 @@ Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
 Section: tooloop/addon
 Architecture: amd64
-Name: Dethleffs Touch-Kiosk
+Name: nginx Webserver
 Depends: nginx, php-fpm, php-mbstring, php-curl, php-xml, php-gd
 Recommends: tooloop-transparent-cursor
 Description: Installs the nginx webserver for web-based presentations
