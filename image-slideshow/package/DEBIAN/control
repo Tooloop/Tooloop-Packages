@@ -6,7 +6,7 @@ Bugs: https://github.com/Tooloop/Tooloop-Packages
 Section: tooloop/presentation
 Architecture: all
 Depends: chromium-browser
-Name: Image slideshow
+Name: Image Slideshow
 Thumbnail: image-slideshow-thumbnail.jpg
 Description: A simple image slideshow
  A simple example app using the chromium browser and some javascript to display

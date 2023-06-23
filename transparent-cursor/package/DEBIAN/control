@@ -5,7 +5,7 @@ Homepage: https://www.tooloop.de
 Bugs: https://github.com/Tooloop/Tooloop-Packages
 Section: tooloop/addon
 Architecture: all
-Name: Transparent mouse cursor
+Name: Transparent Mouse Cursor
 Description: For touch devices
  Install it if you want to hide the mouse cursor completely 
  e. g. on touch displays.
