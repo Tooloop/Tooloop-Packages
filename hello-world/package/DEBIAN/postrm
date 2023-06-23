@@ -1,6 +1,0 @@
-#!/bin/bash
-set -e
-
-# Do something after package removal
-
-exit 0
