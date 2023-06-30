@@ -1,4 +1,4 @@
-Package: tooloop-glmark2
+Package: tooloop-gpu-benchmark
 Version: 1.0.0
 Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
@@ -6,7 +6,7 @@ Bugs: https://github.com/glmark2/glmark2
 Section: tooloop/presentation
 Depends: glmark2
 Architecture: amd64
-Name: glmark2
+Name: GPU Benchmark
 Thumbnail: glmark2-thumbnail.jpg
 Media: glmark2-jellyfish.jpg, glmark2-buffer.jpg, glmark2-refract.jpg, glmark2-shadow.jpg
 Description: OpenGL 2.0 and ES 2.0 benchmark
