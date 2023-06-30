@@ -1,0 +1,10 @@
+#!/bin/bash
+# set -e
+
+# usermod -a -G tooloop www-data
+ln -s /etc/nginx/sites-available/tooloop /etc/nginx/sites-enabled/
+sudo unlink /etc/nginx/sites-enabled/default
+
+systemctl restart nginx
+
+# exit 0
