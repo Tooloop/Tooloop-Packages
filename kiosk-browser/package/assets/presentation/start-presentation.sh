@@ -11,6 +11,7 @@ COMMAND="chromium-browser \
 --overscroll-history-navigation=1 \
 --incognito \
 --disable-features=Translate,Infobars \
+--disable-pinch \
 --no-default-browser-check \
 --no-first-run \
 --noerrdialogs \
