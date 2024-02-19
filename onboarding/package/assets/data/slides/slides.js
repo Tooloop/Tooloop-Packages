@@ -1,8 +1,22 @@
 var slides = [
-    { image: "../../../../../media-player/package/assets/data/Tooloop Greeter Intro.mp4", title: "", description: "" },
-    { image: "../../../../../gpu-benchmark/media/glmark2-buffer.jpg", title: "Desktop", description: "Lorem ipsum dolor hit me. Mommy says knock you out." },
-    { image: "../../../../../gpu-benchmark/media/glmark2-jellyfish.jpg", title: "Menu", description: "Lorem ipsum dolor hit me. Mommy says knock you out." },
-    { image: "../../../../../gpu-benchmark/media/glmark2-refract.jpg", title: "Control Center", description: "Lorem ipsum dolor hit me. Mommy says knock you out." },
-    { image: "../../../../../gpu-benchmark/media/glmark2-shadow.jpg", title: "Files", description: "Lorem ipsum dolor hit me. Mommy says knock you out." },
-    { image: "../../../../../gpu-benchmark/media/glmark2-thumbnail.jpg", title: "Remote control", description: "Lorem ipsum dolor hit me. Mommy says knock you out." }
+    {
+        image: "Hello World.mp4",
+        title: "",
+        description: ""
+    },
+    {
+        image: "placeholder-16x9.png",
+        title: "Mouse cursor",
+        description: `Your mouse cursor is hidden. It will show up if you move it. Click on the desktop to access the _menu_.`
+    },
+    {
+        image: "placeholder-16x9.png",
+        title: "Network access",
+        description: `Tooloop Boxes can be managed over the network. Just type the IP-address of this box into your browser.`
+    },
+    {
+        image: "placeholder-16x9.png",
+        title: "Documentation",
+        description: `You can find manuals and information at [tooloop-os.org](https://tooloop-os.org).`
+    },
 ]
