@@ -12,11 +12,11 @@ COMMAND="chromium-browser \
 --app=file:///media/assets/data/index.html"
 
 if [ $EUID == 0 ]; then
-    pkill chrome
+    /bin/bash /assets/presentation/stop-presentation.sh
     sleep 0.1
     su tooloop -c "$COMMAND" &
 else
-    pkill chrome
+    /bin/bash /assets/presentation/stop-presentation.sh
     sleep 0.1
     $COMMAND &
 fi
