@@ -74,33 +74,44 @@ class Slider {
     }
 
     onScroll(e) {
-        this.activeSlide = Math.round(e.target.scrollLeft / 800);
+        let newSlide = Math.round(e.target.scrollLeft / 800);
+        if(this.activeSlide != newSlide) {
+            this.handleVideoPlayback(this.activeSlide, newSlide);
+            this.activeSlide = newSlide;
+        }
     }
 
     next() {
-        // stop old video
-        if (this.getType(this.activeSlide) == "video") {
-            this.slides[this.activeSlide].querySelector("video").pause();
-        }
-
         // scroll to next slide
         let targetSlide = this.activeSlide >= (this.data.length - 1) ? 0 : this.activeSlide + 1;
         this.element.scrollTo(targetSlide * 800, 0);
 
+        this.handleVideoPlayback(this.activeSlide, targetSlide);
+
+        this.start();
+    }
+
+    handleVideoPlayback(oldSlideIndex, newSlideIndex) {
+
+        // stop old video
+        if (this.getType(oldSlideIndex) == "video") {
+            this.slides[oldSlideIndex].querySelector("video").pause();
+        }
+
         // start new video and timeout
-        if (this.getType(targetSlide) == "video") {
-            let video = this.slides[targetSlide].querySelector("video");
+        if (this.getType(newSlideIndex) == "video") {
+            let video = this.slides[newSlideIndex].querySelector("video");
             video.currentTime = 0
             video.play();
         }
-
-        this.start();
 
     }
 
     previous() {
         let targetSlide = this.activeSlide <= 0 ? (this.data.length - 1) : this.activeSlide - 1
         this.element.scrollTo(targetSlide * 800, 0);
+
+        this.handleVideoPlayback(this.activeSlide, targetSlide);
 
         this.start();
     }

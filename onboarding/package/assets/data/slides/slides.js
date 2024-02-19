@@ -1,8 +1,6 @@
 var slides = [
     {
         image: "Hello World.mp4",
-        title: "",
-        description: ""
     },
     {
         image: "placeholder-16x9.png",
@@ -17,6 +15,6 @@ var slides = [
     {
         image: "placeholder-16x9.png",
         title: "Documentation",
-        description: `You can find manuals and information at [tooloop-os.org](https://tooloop-os.org).`
+        description: `You can find manuals and information at **tooloop-os.org**.`
     },
 ]
