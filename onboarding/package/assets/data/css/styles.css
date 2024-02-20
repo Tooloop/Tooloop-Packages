@@ -9,6 +9,34 @@
     --scale: 1.0;
 }
 
+@font-face {
+    font-family: "Clear Sans";
+    src: url("../fonts/ClearSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url("../fonts/ClearSans-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url("../fonts/ClearSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url("../fonts/ClearSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
 html {
     background-color: var(--dark-grey);
 }
@@ -27,7 +55,7 @@ body {
     position: absolute;
     inset: 0;
 
-    font-family: 'Clear Sans', system-ui, sans-serif;
+    font-family: "Clear Sans", system-ui, sans-serif;
 }
 
 nav {
