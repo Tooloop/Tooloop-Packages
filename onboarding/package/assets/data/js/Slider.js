@@ -5,6 +5,7 @@ class Slider {
 
     data;
     element;
+    progressBar;
     template;
     slides = [];
     activeSlide = 0;
@@ -66,18 +67,26 @@ class Slider {
             this.slides.push(slideNode);
         }
 
+        // append progress bar
+        let progressBar = document.createElement("div");
+        progressBar.classList.add("progressBar");
+        this.progressBar = this.element.appendChild(progressBar);
+        document.querySelector(":root").style.setProperty("--slide-duration", this.slideDuration / 1000 + "s");
+
+
         // observe scroll position
         this.element.onscroll = e => this.onScroll(e);
 
         // start auto play
-        this.start();
+        this.startTimeout();
     }
 
     onScroll(e) {
         let newSlide = Math.round(e.target.scrollLeft / 800);
-        if(this.activeSlide != newSlide) {
+        if (this.activeSlide != newSlide) {
             this.handleVideoPlayback(this.activeSlide, newSlide);
             this.activeSlide = newSlide;
+            this.startTimeout();
         }
     }
 
@@ -88,7 +97,6 @@ class Slider {
 
         this.handleVideoPlayback(this.activeSlide, targetSlide);
 
-        this.start();
     }
 
     handleVideoPlayback(oldSlideIndex, newSlideIndex) {
@@ -112,13 +120,17 @@ class Slider {
         this.element.scrollTo(targetSlide * 800, 0);
 
         this.handleVideoPlayback(this.activeSlide, targetSlide);
-
-        this.start();
     }
 
-    start(timeout = this.slideDuration) {
+    startTimeout(timeout = this.slideDuration) {
         clearTimeout(this.slideTimeout);
         this.slideTimeout = setTimeout(() => { this.next(); }, timeout);
+
+        // restart progress animation
+        // https://css-tricks.com/restart-css-animation/
+        this.progressBar.classList.remove("playing");
+        void this.progressBar.offsetWidth;
+        this.progressBar.classList.add("playing");
     }
 
     getType(slideIndex) {
