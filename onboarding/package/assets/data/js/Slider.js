@@ -77,6 +77,15 @@ class Slider {
         // observe scroll position
         this.element.onscroll = e => this.onScroll(e);
 
+        // keyboard shortcuts
+        document.addEventListener("keydown", (e) => {
+            e.preventDefault();
+        });
+        document.addEventListener("keyup", (e) => {
+            if (e.code === "ArrowLeft") this.previous();
+            if (e.code === "ArrowRight") this.next();
+        });
+
         // start auto play
         this.startTimeout();
     }
