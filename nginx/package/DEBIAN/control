@@ -3,7 +3,7 @@ Version: 1.0.0
 Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
 Section: tooloop/addon
-Architecture: amd64
+Architecture: all
 Name: nginx Webserver
 Depends: nginx, php-fpm, php-mbstring, php-curl, php-xml, php-gd
 Recommends: tooloop-transparent-cursor

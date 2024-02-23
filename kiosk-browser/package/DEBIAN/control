@@ -4,7 +4,7 @@ Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
 Bugs: https://github.com/Tooloop/Tooloop-Packages
 Section: tooloop/presentation
-Architecture: amd64
+Architecture: all
 Depends: chromium-browser
 Recommends: tooloop-transparent-cursor
 Suggests: tooloop-nginx

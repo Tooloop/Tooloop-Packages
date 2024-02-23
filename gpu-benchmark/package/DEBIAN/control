@@ -5,7 +5,7 @@ Homepage: https://www.tooloop.de
 Bugs: https://github.com/glmark2/glmark2
 Section: tooloop/presentation
 Depends: glmark2
-Architecture: amd64
+Architecture: all
 Name: GPU Benchmark
 Thumbnail: glmark2-thumbnail.jpg
 Media: glmark2-jellyfish.jpg, glmark2-buffer.jpg, glmark2-refract.jpg, glmark2-shadow.jpg
