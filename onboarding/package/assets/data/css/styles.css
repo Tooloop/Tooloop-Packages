@@ -187,9 +187,11 @@ button.slide-button.next {
 }
 
 .slide .description code {
-    background-color: var(--medium-grey);
-    padding: 0.15rem 0.5rem;
-    color: white;
+    background-color: #ddd;
+    padding: 0.1rem 0.3rem;
+    color: var(--dark-grey);
+    font-size: 0.888rem;
+    border-radius: 2px;
 }
 
 .progressBar {

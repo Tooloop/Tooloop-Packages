@@ -79,7 +79,8 @@ class Slider {
 
         // keyboard shortcuts
         document.addEventListener("keydown", (e) => {
-            e.preventDefault();
+            if (e.code === "ArrowLeft" || e.code === "ArrowRight")
+                e.preventDefault();
         });
         document.addEventListener("keyup", (e) => {
             if (e.code === "ArrowLeft") this.previous();
