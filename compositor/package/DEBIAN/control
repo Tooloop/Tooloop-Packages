@@ -7,5 +7,13 @@ Architecture: all
 Name: picom Compositor
 Depends: picom
 Recommends: picom-conf
-Description: Installs the picom compositor for X11
 Thumbnail: picom-thumbnail.png
+Description: Installs the picom compositor to eliminate screen tearing.
+ [picom](https://github.com/yshui/picom) is a compositor for X, and a fork of Compton.
+ It has many features but we are primarily using it to fight screen tearing.
+ .
+ There is a graphical tool to configure picom:
+ .
+ ```bash
+ picom-conf /home/tooloop/.config/picom.conf
+ ```
