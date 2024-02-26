@@ -1,0 +1,11 @@
+Package: tooloop-compositor
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Section: tooloop/addon
+Architecture: all
+Name: picom Compositor
+Depends: picom
+Recommends: picom-conf
+Description: Installs the picom compositor for X11
+Thumbnail: picom-thumbnail.png
