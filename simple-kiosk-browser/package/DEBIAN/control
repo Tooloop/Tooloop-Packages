@@ -1,4 +1,4 @@
-Package: tooloop-kiosk-browser
+Package: tooloop-simple-kiosk-browser
 Version: 1.0.0
 Maintainer: Tooloop Multimedia
 Homepage: https://www.tooloop.de
@@ -8,8 +8,8 @@ Architecture: all
 Depends: chromium-browser
 Recommends: tooloop-transparent-cursor
 Suggests: tooloop-nginx
-Name: Kiosk Browser
-Description: Full-screen browser for touch kiosks
+Name: Simple Kiosk Browser
+Description: Simple fullscreen browser for touch kiosks
  A simple full-screen kiosk browser based on chromium.
  You can define its’ homepage in the settings.
 Thumbnail: kiosk-browser-thumbnail.jpg
