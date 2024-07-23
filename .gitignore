@@ -2,3 +2,6 @@
 *.zip
 .DS_Store
 \#*
+
+# Non open source packages
+kiosk-browser

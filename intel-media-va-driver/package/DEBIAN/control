@@ -1,0 +1,20 @@
+Package: tooloop-intel-media-va-driver-non-free
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://www.github.com/Tooloop/Tooloop-Packages
+Section: tooloop/addon
+Architecture: amd64
+Depends: intel-media-va-driver-non-free
+Name: Intel Hardware Video Acceleration
+Thumbnail: intel-media-va-driver.png
+Description: Installs the Intel Media Driver for VAAPI
+ The [Intel Media Driver for VAAPI](https://github.com/intel/media-driver) is a 
+ new VA-API (Video Acceleration API) user mode driver supporting hardware 
+ accelerated decoding, encoding, and video post processing for GEN based 
+ graphics hardware.
+ .
+ Installing this will reduce CPU load when decoding e. g. h.264 video if 
+ supported by the playback software. As result your video will run smoother and 
+ your device produces less heat.
+ 

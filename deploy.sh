@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "-------------------------------------------------------------------------"
+echo "Copying packages to local repository"
+echo ""
 
 # move them to the repository
 for archive in *; do
@@ -14,8 +17,3 @@ done
 /opt/tooloop/scripts/tooloop-update-packages
 
 sudo systemctl restart tooloop-control.service
-
-# list available packages
-#apt list tooloop*
-
-tree /assets/packages/

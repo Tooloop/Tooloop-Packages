@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tooloop OS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="slider"></div>
+
+    <template id="slide-template">
+        <div class="slide">
+            <section class="image"></section>
+            <section class="description"></section>
+        </div>
+    </template>
+
+    <nav>
+        <button class="slide-button previous" onclick="slider.previous();">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="miter"
+                stroke-linejoin="miter">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M15 6l-6 6l6 6" />
+            </svg>
+        </button>
+
+        <button class="slide-button next" onclick="slider.next();">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="miter"
+                stroke-linejoin="miter">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+            </svg>
+        </button>
+
+        <button class="close-button" onclick="window.close();">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
+            </svg>
+        </button>
+    </nav>
+
+    <script src="js/marked.min.js"></script>
+    <script src="slides/slides.js"></script>
+    <script src="js/Slider.js"></script>
+
+    <script>
+        var slider = new Slider("#slider", "#slide-template", slides, 10000);
+    </script>
+
+</body>
+
+</html>

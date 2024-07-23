@@ -1,0 +1,13 @@
+Package: tooloop-onboarding
+Version: 1.0.0
+Maintainer: Tooloop Multimedia
+Homepage: https://www.tooloop.de
+Bugs: https://github.com/Tooloop/Tooloop-Packages
+Section: tooloop/presentation
+Architecture: all
+Depends: chromium-browser
+Name: Onboarding
+Description: Tipps and first steps
+ Learn how to find your way in Tooloop OS.
+Thumbnail: onboarding-thumbnail.png
+
