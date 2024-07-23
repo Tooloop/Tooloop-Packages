@@ -8,6 +8,17 @@ Architecture: all
 Depends: mpv
 Name: Media Player
 Description: A simple image and video player
- The tooloop media player is using [mpv](https://mpv.io/) to loop over all images and videos in `/assets/data`.
+ The media player is using [mpv](https://mpv.io/) to loop over all images and videos in `/assets/data`.
+ .
+ # Attribution
+ .
+ **Timelapse over Kazakhstan**  
+ by [Earth Science and Remote Sensing Unit, NASA Johnson Space Center](https://eol.jsc.nasa.gov/)
+ .
+ **Dandelion Bloom**
+ by [Andreas](https://pixabay.com/users/adege-4994132/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=35022) from [Pixabay](https://pixabay.com/)
+ .
+ **Forrest**
+ by [Matthias Groeneveld](https://pixabay.com/users/matthias_groeneveld-4535957/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=185726) from [Pixabay](https://pixabay.com/)
 Thumbnail: video-player-thumbnail.jpg
 
